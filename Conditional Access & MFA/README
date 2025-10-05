@@ -1,3 +1,5 @@
+  ~~
+
 # Conditional Access & Multi-Factor Authentication (MFA)
 
 ## Overview
@@ -39,4 +41,9 @@ flowchart LR
   Eval -->|Fails policies| Block
 
 
+➡️ When GitHub renders your README, that text will **automatically turn into a visual flowchart** showing your Conditional Access flow:  
+
+**User → Sign-in Request → Conditional Access Evaluation → Grant or Block Access**
+
+Would you like me to show you how to **add a title or color/style elements** to make it look more polished in your GitHub README?
 

@@ -1,5 +1,3 @@
-  ~~
-
 # Conditional Access & Multi-Factor Authentication (MFA)
 
 ## Overview
@@ -23,27 +21,3 @@ The goal is to enforce Zero Trust access control, verifying user identity, devic
 - User Risk & Sign-In Risk
 - Named Locations & Device Compliance
 - Zero Trust Principles: Verify Explicitly, Least Privilege, Assume Breach
-
----
-
-##  Architecture Diagram
-
-```mermaid
-flowchart LR
-  User([User])
-  SignIn([Sign-in Request])
-  Eval([Conditional Access Evaluation])
-  Grant([Grant Access])
-  Block([Block Access])
-
-  User --> SignIn --> Eval
-  Eval -->|Meets policies| Grant
-  Eval -->|Fails policies| Block
-
-
-➡️ When GitHub renders your README, that text will **automatically turn into a visual flowchart** showing your Conditional Access flow:  
-
-**User → Sign-in Request → Conditional Access Evaluation → Grant or Block Access**
-
-Would you like me to show you how to **add a title or color/style elements** to make it look more polished in your GitHub README?
-

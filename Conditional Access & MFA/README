@@ -1,1 +1,42 @@
+# Conditional Access & Multi-Factor Authentication (MFA)
+
+## Overview
+This project demonstrates the design and implementation of Conditional Access (CA) and Multi-Factor Authentication (MFA) in Microsoft Entra ID (formerly Azure AD).  
+The goal is to enforce Zero Trust access control, verifying user identity, device health, and session context before granting access to corporate resources.
+
+---
+
+## Objectives
+- Enforce MFA for all users accessing Microsoft 365 and Azure resources.
+- Block legacy authentication protocols.
+- Apply access controls based on user risk, location, and device compliance.
+- Implement break-glass accounts and emergency access procedures.
+- Test and document user experience across different access conditions.
+
+---
+
+##  Concepts Covered
+- Conditional Access Policies
+- Multi-Factor Authentication (MFA)
+- User Risk & Sign-In Risk
+- Named Locations & Device Compliance
+- Zero Trust Principles: Verify Explicitly, Least Privilege, Assume Breach
+
+---
+
+##  Architecture Diagram
+
+```mermaid
+flowchart LR
+  User([User])
+  SignIn([Sign-in Request])
+  Eval([Conditional Access Evaluation])
+  Grant([Grant Access])
+  Block([Block Access])
+
+  User --> SignIn --> Eval
+  Eval -->|Meets policies| Grant
+  Eval -->|Fails policies| Block
+
+
 

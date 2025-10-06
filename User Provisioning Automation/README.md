@@ -9,6 +9,7 @@ It eliminates manual account creation, enforces role-based access, and ensures t
 - Connect-MgGraph -Scopes "User.ReadWrite.All","Group.ReadWrite.All"
 
 ### Step 2. Automated User Creation
+```powershell
 # Example: Create new user
 $newUser = @{
   accountEnabled = $true

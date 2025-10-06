@@ -82,7 +82,3 @@ monitoring:
 * Reduced password management overhead by enabling password writeback.
 * Improved identity governance through centralized monitoring in Sentinel.
 * Established foundation for Zero Trust access controls across environments.
-
-    class A,B,G onprem;
-    class C,E cloud;
-    class D,F security;

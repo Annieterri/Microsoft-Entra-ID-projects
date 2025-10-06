@@ -24,7 +24,6 @@ The goal is to enforce Zero Trust access control, verifying user identity, devic
 
 ##  Architecture Diagram
 
-*(Add your diagram here — for now, you can include a placeholder like the one below)*
 
 ```mermaid
 flowchart LR

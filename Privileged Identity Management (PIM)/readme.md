@@ -1,0 +1,31 @@
+# 🔑 Privileged Identity Management (PIM)
+
+## 📘 Overview
+This project demonstrates the configuration and management of **Microsoft Entra ID Privileged Identity Management (PIM)** to implement **Just-In-Time (JIT)** privileged access.  
+The goal is to enhance **identity governance**, reduce **standing administrative permissions**, and align with **Zero Trust** and **least privilege** principles.
+
+---
+
+## 🎯 Objectives
+- Enable and configure **PIM** for Azure AD roles (and optionally Azure Resource roles).  
+- Implement **approval workflows** and **activation notifications**.  
+- Enforce **time-bound access** with MFA and justification requirements.  
+- Conduct **access reviews** for continuous privilege validation.  
+- Monitor and audit privileged role usage.
+
+---
+
+## 🧠 Concepts Covered
+- **Privileged Identity Management (PIM)**  
+- **Just-In-Time (JIT) Access**  
+- **Access Reviews**  
+- **Least Privilege Principle**  
+- **Zero Standing Access (ZSA)**  
+- **Privileged Role Alerts and Notifications**
+
+---
+
+## 🧩 Architecture Diagram
+
+*(Add your diagram here or use a placeholder)*
+

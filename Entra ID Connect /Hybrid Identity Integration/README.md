@@ -16,9 +16,9 @@ The goal is to enable Hybrid Identity, ensuring seamless sign-on, synchronized i
 Start-Process "AzureADConnect.exe"
 ```
 
-* Choose **Custom Installation**
-* Select **Password Hash Synchronization (PHS)** or **Pass-Through Authentication (PTA)**
-* Enable **Seamless SSO** for automatic domain sign-in
+* Choose Custom Installation
+* Select Password Hash Synchronization (PHS) or Pass-Through Authentication (PTA)
+* Enable Seamless SSO for automatic domain sign-in
 
 ---
 

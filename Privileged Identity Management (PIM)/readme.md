@@ -48,7 +48,7 @@ The goal is to enhance identity governance, reduce standing administrative permi
   - Security Reader  
   - Conditional Access Administrator
 
-# Step 3: Activation Settings
+### Step 3: Activation Settings
 activationSettings:
   requireMFA: true
   requireJustification: true
@@ -61,7 +61,7 @@ activationSettings:
     onActivation: true
     onExpiration: true
 
-# Step 4: Access Reviews
+### Step 4: Access Reviews
 accessReviews:
   frequency: "Monthly"
   durationDays: 7
@@ -73,7 +73,7 @@ accessReviews:
     - "Global Administrator"
     - "Security Administrator"
 
-# Step 5: Monitoring & Audit
+### Step 5: Monitoring & Audit
 monitoring:
   logSources:
     - "AuditLogs"
@@ -98,11 +98,5 @@ flowchart LR
   Expiration([Role Expiration])
 
   User --> Request --> Approval --> Activation --> Expiration
-
-
-```powershell
-# Example: Assign user as eligible for Security Administrator
-Connect-AzureAD
-Add-AzureADMSPrivilegedRoleAssignment -UserId "<userObjectId>" -RoleId "<roleObjectId>" -AssignmentState "Eligible"
 
 

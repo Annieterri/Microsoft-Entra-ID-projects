@@ -62,7 +62,7 @@ The goal is to enhance identity governance, reduce standing administrative permi
     - onExpiration: true
 
 ### Step 4: Access Reviews
--accessReviews:
+- accessReviews:
   - frequency: "Monthly"
   - durationDays: 7
   - autoRemoveInactiveUsers: true

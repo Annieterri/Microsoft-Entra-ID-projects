@@ -83,23 +83,6 @@ monitoring:
 * Improved identity governance through centralized monitoring in Sentinel.
 * Established foundation for Zero Trust access controls across environments.
 
-```mermaid
-flowchart LR
-    A[On-Premises Active Directory] --> B[Entra ID Connect Sync]
-    B --> C[Microsoft Entra ID (Cloud Directory)]
-    C --> D[Conditional Access & MFA Policies]
-    D --> E[User Access to Cloud Apps (M365, SaaS)]
-    C --> F[Microsoft Sentinel Monitoring]
-
-    %% Hybrid Join Path
-    A --> G[Hybrid-Joined Devices]
-    G --> D
-
-    %% Styling
-    classDef onprem fill:#dce6f7,stroke:#3366cc,stroke-width:1px;
-    classDef cloud fill:#e8f6ef,stroke:#28a745,stroke-width:1px;
-    classDef security fill:#fff4e6,stroke:#ff9900,stroke-width:1px;
-
     class A,B,G onprem;
     class C,E cloud;
     class D,F security;

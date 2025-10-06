@@ -10,19 +10,19 @@ It eliminates manual account creation, enforces role-based access, and ensures t
 
 ### Step 2. Automated User Creation
 # Example: Create new user
-- $newUser = @{
-  - accountEnabled = $true
-  - displayName = "John Doe"
-  - mailNickname = "johndoe"
-  - userPrincipalName = "johndoe@yourdomain.com"
-  - passwordProfile = @{
-    - forceChangePasswordNextSignIn = $true
-    - password = "Temp@12345"
- -  }
- -  department = "Finance"
-  - jobTitle = "Analyst"
-- }
-- New-MgUser @newUser
+$newUser = @{
+  accountEnabled = $true
+  displayName = "John Doe"
+  mailNickname = "johndoe"
+  userPrincipalName = "johndoe@yourdomain.com"
+  passwordProfile = @{
+    forceChangePasswordNextSignIn = $true
+    password = "Temp@12345"
+  }
+  department = "Finance"
+  jobTitle = "Analyst"
+}
+New-MgUser @newUser
 
 ### Step 3. Assign Licenses & Group Membership
 - licenseAssignment:

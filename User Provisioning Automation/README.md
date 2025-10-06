@@ -36,7 +36,7 @@ New-MgUser @newUser
   - "MFA-Enforced"
 
 ### Step 4. Automate Offboarding
-# Disable and archive user on exit
+- Disable and archive user on exit
 - Set-MgUser -UserId "johndoe@yourdomain.com" -AccountEnabled:$false
 - Move-MgUserToGroup -GroupId "Offboarded-Users" -UserId "johndoe@yourdomain.com"
 

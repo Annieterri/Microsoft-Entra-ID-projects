@@ -37,9 +37,9 @@ The goal is to enhance identity governance, reduce standing administrative permi
 ##  Implementation Steps
 
 ### Step 1. Enable PIM
-1. Navigate to:  
+- Navigate to:  
    `Entra ID > Identity Governance > Privileged Identity Management`
-2. Activate **PIM for Azure AD roles** and select eligible admin roles (e.g., Global Administrator, Security Administrator).
+- Activate **PIM for Azure AD roles** and select eligible admin roles (e.g., Global Administrator, Security Administrator).
 
 ### Step 2. Assign Eligible Roles
 - Assign users as **Eligible** instead of **Permanent** members.  
@@ -49,41 +49,41 @@ The goal is to enhance identity governance, reduce standing administrative permi
   - Conditional Access Administrator
 
 ### Step 3: Activation Settings
-activationSettings:
-  requireMFA: true
-  requireJustification: true
-  activationDurationHours: 4
-  approvalWorkflow:
-    enabled: true
-    approvers:
+- activationSettings:
+  - requireMFA: true
+  - requireJustification: true
+  - activationDurationHours: 4
+  - approvalWorkflow:
+    - enabled: true
+    - approvers:
       - "Security Admin"
-  notifications:
-    onActivation: true
-    onExpiration: true
+  - notifications:
+    - onActivation: true
+    - onExpiration: true
 
 ### Step 4: Access Reviews
-accessReviews:
-  frequency: "Monthly"
-  durationDays: 7
-  autoRemoveInactiveUsers: true
-  reviewers:
+-accessReviews:
+  - frequency: "Monthly"
+  - durationDays: 7
+  - autoRemoveInactiveUsers: true
+  - reviewers:
     - "Head of Security"
     - "IT Governance Officer"
-  rolesReviewed:
+ -  rolesReviewed:
     - "Global Administrator"
     - "Security Administrator"
 
 ### Step 5: Monitoring & Audit
-monitoring:
-  logSources:
+- monitoring:
+ -  logSources:
     - "AuditLogs"
     - "PIMActivity"
-  sendToSentinel: true
-  alerts:
+  - sendToSentinel: true
+ -  alerts:
     - name: "Unapproved Activation"
-      severity: "High"
+      - severity: "High"
     - name: "OutOfHoursActivation"
-      severity: "Medium"
+      - severity: "Medium"
 
 ---
 

@@ -3,7 +3,7 @@
 ## Overview
 
 This project implements Role-Based Access Control (RBAC) in Microsoft Entra ID to enforce the Principle of Least Privilege (PoLP) across users, groups, and applications.
-It ensures that each identity only has the minimum access required to perform its duties — reducing the attack surface and improving compliance with governance policies.
+It ensures that each identity only has the minimum access required to perform its duties, reducing the attack surface and improving compliance with governance policies.
 
 ---
 
@@ -26,7 +26,7 @@ roles:
 ### Step 2. Assign Roles to Groups (Not Individuals)
 
 ```powershell
-# Assign RBAC role to a group instead of a direct user
+Assign RBAC role to a group instead of a direct user
 Connect-AzAccount
 New-AzRoleAssignment -ObjectId "<groupObjectId>" -RoleDefinitionName "Security Reader" -Scope "/subscriptions/<subID>"
 ```

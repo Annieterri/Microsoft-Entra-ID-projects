@@ -65,17 +65,7 @@ The goal is to enforce Zero Trust access control, verifying user identity, devic
 
 ---
 
-## Example KQL Query (for Sentinel Integration)
-```kql
-SigninLogs
-| where ConditionalAccessStatus == "failure"
-| summarize FailedLogins = count() by UserPrincipalName, Location, ConditionalAccessStatus
-| order by FailedLogins desc
-
----
-
-Architecture Diagram
-
+## Architecture Diagram 
 
 ```mermaid
 flowchart LR
@@ -88,4 +78,3 @@ flowchart LR
   User --> SignIn --> Eval
   Eval -->|Meets policies| Grant
   Eval -->|Fails policies| Block
-

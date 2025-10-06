@@ -11,7 +11,7 @@ It integrates Audit Logs, Sign-in Logs, and Provisioning Logs with Microsoft Sen
 ### Step 1. Enable and Collect Entra Logs
 
 ```powershell
-# Enable diagnostic settings to send Entra logs to Sentinel
+Enable diagnostic settings to send Entra logs to Sentinel
 Set-AzDiagnosticSetting -Name "EntraLogsToSentinel" `
   -ResourceId "/providers/Microsoft.aadiam/diagnosticSettings" `
   -WorkspaceId "<SentinelWorkspaceID>" `

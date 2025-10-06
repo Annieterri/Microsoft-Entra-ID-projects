@@ -24,6 +24,7 @@ $newUser = @{
   jobTitle = "Analyst"
 }
 New-MgUser @newUser
+```
 
 ### Step 3. Assign Licenses & Group Membership
 - licenseAssignment:

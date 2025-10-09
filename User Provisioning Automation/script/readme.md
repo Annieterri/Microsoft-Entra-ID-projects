@@ -1,9 +1,6 @@
+## PowerShell Scripts  
 
----
-
-## 🪜 STEP 4 — Add Your PowerShell Scripts  
-
-Example `create-user.ps1`:
+#### `create-user.ps1`:
 ```powershell
 Connect-MgGraph -Scopes "User.ReadWrite.All","Group.ReadWrite.All"
 
@@ -21,3 +18,21 @@ $newUser = @{
 }
 
 New-MgUser @newUser
+```
+
+#### `assign-license.ps1`
+```powershell
+$user = Get-MgUser -UserId "janesmith@yourdomain.com"
+$license = @{
+  addLicenses = @(@{ skuId = "ENTERPRISEPACK" })
+  removeLicenses = @()
+}
+Set-MgUserLicense -UserId $user.Id -BodyParameter $license
+```
+
+#### `offboard-user.ps1`
+```powershell
+Set-MgUser -UserId "janesmith@yourdomain.com" -AccountEnabled:$false
+New-MgGroupMember -GroupId "<OffboardedGroupID>" -DirectoryObjectId (Get-MgUser -UserId "janesmith@yourdomain.com").Id
+```
+

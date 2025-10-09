@@ -3,7 +3,7 @@
 
 ## 🪜 STEP 4 — Add Your PowerShell Scripts  
 
-Example `scripts/create-user.ps1`:
+Example `create-user.ps1`:
 ```powershell
 Connect-MgGraph -Scopes "User.ReadWrite.All","Group.ReadWrite.All"
 
